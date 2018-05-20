@@ -1,0 +1,19 @@
+.AppIndex {
+  width: 100%;
+  position: absolute;
+}
+.Appheader {
+  display: flex;
+  justify-content: space-between;
+}
+
+.Title {
+  font-size: 2em;
+  color: #000000;
+  font-family: 'Roboto', sans-serif;
+}
+.Date {
+  font-size: 1.5em;
+  color: #000000;
+  font-family: 'Roboto', sans-serif;
+}

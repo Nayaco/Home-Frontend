@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import history from '../utils/history'
-import { Layout, Button, Popover} from 'antd'
+import { Layout, Button, Popover, Breadcrumb, Icon, Row, Col} from 'antd'
 import './App.css';
 const { Header, Content, Footer, Sider } = Layout
 
@@ -23,17 +23,26 @@ class App extends Component {
       <div className="AppContainer">
         <Layout className="AppIndex">
           <Header className="Appheader"
-            style={{ backgroundColor: 'white'}}
+            style={{ backgroundColor: '#00A0E8', width: '100%'}}
             >
-            <p className="Title">Welcome To QSC Backend</p>    
-            <p className="Date">{GetDate()}</p>
+            <div className="Appsubheader">
+              <Row>
+                <Col span={1}><Icon type='smile-o' style={{ fontSize: 18, color: '#fff' }}/></Col>
+                <Col span={6}><p className="Title">Welcome To QSC Backend</p></Col>    
+                <Col span={4}><p className="Date">{GetDate()}</p></Col>
+              </Row>
+            </div>
           </Header>
 
-          <Content>
-            {this.props.children}
+          <Content className="AppContent"
+            style={{padding: '0 50px', marginTop: 24}}>
+            <div style={{ background: '#fff', padding: 24, height: '100%'}}>
+              {this.props.children}
+            </div>
           </Content>
 
-          <Footer>
+          <Footer style={{display: 'flex',justifyContent: 'center'}}>
+            <p>♥ Powered BY QSC FullMetal Bean</p>
           </Footer>
         </Layout>
       </div>

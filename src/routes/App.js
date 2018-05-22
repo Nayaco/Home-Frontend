@@ -27,9 +27,9 @@ class App extends Component {
             >
             <div className="Appsubheader">
               <Row>
-                <Col span={1}><Icon type='smile-o' style={{ fontSize: 18, color: '#fff' }}/></Col>
+                <Col span={1} offset={1}><Icon type='smile-o' style={{ fontSize: 18, color: '#fff' }}/></Col>
                 <Col span={6}><p className="Title">Welcome To QSC Backend</p></Col>    
-                <Col span={4}><p className="Date">{GetDate()}</p></Col>
+                <Col span={4} o ffset={12}><p className="Date">{GetDate()}</p></Col>
               </Row>
             </div>
           </Header>

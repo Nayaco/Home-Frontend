@@ -8,7 +8,7 @@ const Get = (url)=>{
 
 const Post = (url, data)=>{
     return fetch(url,{
-        body: JSON.stringify(data),
+        body: data,
         cache: 'no-cache',
         method: 'POST',
         mode: 'cors',

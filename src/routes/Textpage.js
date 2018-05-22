@@ -6,7 +6,7 @@ class Textpage extends Component {
 	render(){
 		return(
 			<div className="Textpageindex">
-				<Inputer url="http://localhost:80/console/insert"/>			
+				<Inputer url="http://localhost:80/console"/>			
 			</div>
 		)
 	}

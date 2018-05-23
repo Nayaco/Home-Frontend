@@ -1,8 +1,8 @@
-import { Components } from 'react'
+import React, { Component } from 'react'
 import { Button, Form } from 'antd'
 const FormItem = Form.Item
 
-class Inputer extends Components{
+class Artical extends Component{
 	handleupload = ()=>{
 		const FormData = new FormData()
 	}
@@ -19,4 +19,4 @@ class Inputer extends Components{
 	}
 }
 
-export default Inputer
+export default Artical

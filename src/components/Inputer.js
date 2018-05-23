@@ -124,18 +124,12 @@ class Inputer extends Component{
     };
 
 		return(
-			<div className='Inputbox' style={{height: '640px'}}>
+			<div className='Inputbox' style={{height: '640px', backgroundColor: '#fff'}}>
 				<Layout style={{backgroundColor: '#ffffff'}}>
-					<Sider style={{width: '30%', backgroundColor: '#ffffff'}}>
-						<div style={{backgroundColor: '#ffffff', height: '100%'}}>
-							<Progress type='circle' percent={progress}/>
-						</div>
-					</Sider>
-
-					<Content>
+					<Content style={{marginLeft: '5%', width: '40%'}}>
 						<Form onSubmit={this.handleUpload} style={{width: '100%'}}>
 							<Row type='flex' style={{alignItems: 'center'}} gutter={16}>
-								<Col span={2}><p style={{fontFamily: '\'Roboto\', sans-serif'}}>Filename</p></Col>
+								<Col span={3}><p style={{fontFamily: '\'Roboto\', sans-serif'}}>Filename</p></Col>
 								<Col span={18}>
 								<FormItem>
 									{getFieldDecorator('title', {
@@ -148,7 +142,7 @@ class Inputer extends Component{
 							</Row>
 
 							<Row type='flex' style={{alignItems: 'center'}} gutter={16}>
-								<Col span={2}><p style={{fontFamily: '\'Roboto\', sans-serif'}}>Author</p></Col>
+								<Col span={3}><p style={{fontFamily: '\'Roboto\', sans-serif'}}>Author</p></Col>
 								<Col span={18}>
 								<FormItem>
 									{getFieldDecorator('author', {
@@ -161,7 +155,7 @@ class Inputer extends Component{
 							</Row>
 
 							<Row type='flex' style={{alignItems: 'center'}} gutter={16}>
-								<Col span={2}><p style={{fontFamily: '\'Roboto\', sans-serif'}}>Description</p></Col>
+								<Col span={3}><p style={{fontFamily: '\'Roboto\', sans-serif'}}>Description</p></Col>
 								<Col span={18}>
 								<FormItem>
 									{getFieldDecorator('description', {
@@ -188,6 +182,12 @@ class Inputer extends Component{
 							</Row>
 						</Form>
 					</Content>
+					
+					<Sider style={{width: '300px', backgroundColor: '#ffffff'}}>
+						<div style={{backgroundColor: '#ffffff', height: '100%'}}>
+							<Progress type='circle' percent={progress}/>
+						</div>
+					</Sider>
 				</Layout>
 			</div>
 		)
